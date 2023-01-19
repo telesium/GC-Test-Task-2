@@ -29,14 +29,14 @@ namespace WindowsFormsApp10
         {
             DataTable dt = new DataTable();
 
-            DataColumn dc = new DataColumn("Differencia", typeof(string));
+            DataColumn dc = new DataColumn("Differencia", typeof(decimal));
             dt.Columns.Add(dc);
 
-            double dDiferencia = 0.00D;
+            decimal dDiferencia = 0.00m;
             for (var i = 0; i < 1000; i++)
             {
-                dt.Rows.Add(dDiferencia.ToString());
-                dDiferencia += 0.01D;
+                dt.Rows.Add(dDiferencia);
+                dDiferencia += 0.01m;
             }
 
             return dt;
