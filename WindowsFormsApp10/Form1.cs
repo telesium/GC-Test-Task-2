@@ -20,7 +20,7 @@ namespace WindowsFormsApp10
         private void SetupGrid()
         {
             c1TrueDBGrid1.DataSource = GetDataTable();
-
+            
             c1TrueDBGrid1.Splits[0].DisplayColumns[0].DataColumn.FilterOperator = "IN";
             c1TrueDBGrid1.Columns[0].FilterDropdown = true;
         }
@@ -29,13 +29,13 @@ namespace WindowsFormsApp10
         {
             DataTable dt = new DataTable();
 
-            DataColumn dc = new DataColumn("Differencia", typeof(double));
+            DataColumn dc = new DataColumn("Differencia", typeof(string));
             dt.Columns.Add(dc);
 
             double dDiferencia = 0.00D;
             for (var i = 0; i < 1000; i++)
             {
-                dt.Rows.Add(dDiferencia);
+                dt.Rows.Add(dDiferencia.ToString());
                 dDiferencia += 0.01D;
             }
 
