@@ -29,13 +29,13 @@ namespace WindowsFormsApp10
         {
             DataTable dt = new DataTable();
 
-            DataColumn dc = new DataColumn("Differencia", typeof(decimal));
+            DataColumn dc = new DataColumn("Differencia", typeof(double));
             dt.Columns.Add(dc);
 
             decimal dDiferencia = 0.00m;
             for (var i = 0; i < 1000; i++)
             {
-                dt.Rows.Add(dDiferencia);
+                dt.Rows.Add((double)dDiferencia);
                 dDiferencia += 0.01m;
             }
 
